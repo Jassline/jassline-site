@@ -1,0 +1,370 @@
+:root {
+    --bg-main: #0E0A16;        /* 全頁背景：深紅黑 */
+    --bg-secondary: #531977;   /* 區塊底色：亮深紫 */
+    --card-bg: #3A114E;        /* 卡片背景：深紫黑 */
+    --border-soft: #3A2222;    /* 柔和邊框：深紅 */
+   --circle-bg: #2A1616;
+
+
+
+    --accent: #FF6B3B;         /* 按鈕/強調色：亮橙紅 */
+
+    --text-main: #E6E6F0;      /* 主文字：白紫 */
+    --text-muted: #CFC7D9;     /* 次文字：較淡灰紫 */
+}
+
+
+
+/* === 全域設定 === */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--bg-main);
+    color: var(--text-main);
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* === HEADER === */
+.site-header {
+    width: 100%;
+    padding: 12px 0 14px;
+    text-align: center;
+    background-color: var(--bg-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.site-header .logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--accent-red);
+}
+
+/* 導覽列連結 */
+.site-header nav a {
+    display: inline-block;
+    margin: 0 12px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.site-header nav a:hover {
+    color: var(--accent-blue);
+    text-decoration: underline;
+}
+
+/* === 主內容外框（可選） === */
+main {
+    max-width: 1100px;
+    margin: 30px auto 60px;
+    padding: 0 20px;
+}
+
+/* === 個人基本資料區 === */
+.profile-A {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px auto 60px;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.left-A {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.photo-A img {
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #222;
+    border: 2px solid var(--border-soft);
+}
+
+.name-info-A {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.name-info-A h1 {
+    margin: 10px 0 5px;
+    font-size: 26px;
+}
+
+.highlight-A {
+    flex: 1;
+    background: var(--bg-secondary);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-soft);
+}
+
+.highlight-A h2 {
+    margin-bottom: 12px;
+}
+
+.highlight-A h3 {
+    margin-top: 16px;
+    margin-bottom: 4px;
+    color: var(--accent-blue);
+    font-size: 18px;
+}
+
+.highlight-A p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* === 專業技能 === */
+.skills {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.skills-section {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.skills-section h2 {
+    margin-bottom: 20px;
+}
+
+.skills-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.skill {
+    width: 150px;
+    text-align: center;
+}
+
+/* 圓圈基本樣式（改成深紅色系） */
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 10px;
+    color: var(--text-main);
+}
+
+.progress-65 {
+    background: conic-gradient(var(--accent) 0 65%, var(--circle-bg) 65% 100%);
+}
+
+.progress-70 {
+    background: conic-gradient(var(--accent) 0 70%, var(--circle-bg) 70% 100%);
+}
+
+.progress-80 {
+    background: conic-gradient(var(--accent) 0 80%, var(--circle-bg) 80% 100%);
+}
+
+
+.skill p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.skills-summary {
+    max-width: 600px;
+    margin: 10px auto 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ===== 作品展示區 ===== */
+.works {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.works h2 {
+    margin-bottom: 30px;
+}
+
+/* 一排一個作品卡片，往下排 */
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* 單張作品卡片（整排置中） */
+.work-card {
+    background: var(--card-bg);
+    border-radius: 14px;
+    border: 1px solid var(--border-soft);
+    padding: 24px 22px 26px;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.6);
+}
+
+.work-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: var(--accent);
+}
+
+.work-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* 作品中的媒體區（封面、影片、按鈕） */
+.work-media {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.work-media-item {
+    flex: 1 1 260px;
+}
+
+/* 簡報封面圖 */
+.work-cover {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+
+/* 影片 */
+.video-box {
+   width: 100%;
+   max-width: 360px;
+   margin: 6px auto 0;
+   display: block;
+   border-radius: 10px;
+}
+
+/* 媒體說明小字 */
+.media-note {
+    font-size: 12px;
+    margin-top: 6px;
+    color: var(--text-muted);
+}
+
+.media-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* 次要按鈕（像一頁式網站） */
+.btn-secondary {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 4px;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* RWD：手機版改成一欄 */
+@media (max-width: 768px) {
+    .work-card {
+        padding: 20px 16px 22px;
+    }
+
+    .work-media {
+        flex-direction: column;
+    }
+
+    .work-media-item {
+        flex: 1 1 100%;
+    }
+}
+
+
+/* === 聯繫資訊 === */
+.contact {
+    background: var(--bg-secondary);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid var(--border-soft);
+}
+
+.contact h2 {
+    margin-bottom: 16px;
+}
+
+.contact-box {
+    max-width: 500px;
+    margin: 0 auto;
+    background: var(--bg-main);
+    border: 1px solid var(--border-soft);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.contact-box p {
+    margin: 6px 0;
+    color: var(--text-muted);
+}
+
+.contact-box a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
